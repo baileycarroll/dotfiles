@@ -1,0 +1,23 @@
+# Appearance
+theme = tokyonight_night
+
+font-family = "JetBrains Mono"
+font-size = 14
+font-thicken = true
+
+# Window Geometry
+window-width = 120
+window-height = 30
+
+# Effects
+background-opacity = 0.85
+background-blur-radius = 15
+
+# Cursor & Shell
+cursor-style = block
+shell-integration = zsh
+
+# Copy & Paste
+copy-on-select = clipboard
+clipboard-read = allow
+clipboard-write = allow

@@ -1,0 +1,25 @@
+add_newline = false
+
+[character]
+success_symbol = "➜"
+error_symbol = "✗"
+
+[directory]
+truncation_length = 3
+
+[git_branch]
+symbol = " "
+
+[git_status]
+conflicted = " "
+ahead = "⇡"
+behind = "⇣"
+modified = "✚"
+staged = "●"
+stashed = "≡"
+
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%H:%M"
+
