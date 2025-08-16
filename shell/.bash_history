@@ -1,111 +1,3 @@
-hexdump -c esp/EFI/BOOT/BOOTX64.EFI | head
-nvim .config/
-nvim .
-cd AkatoshAGI/
-ls
-cd AkatoshOS/
-ls
-nvim .
-nvim .
-nvim .
-ls
-cd ../
-cd ../
-ls
-rm -rf AkatoshAGI/
-rm akatosh_setup.sh 
-nvim akatosh_setup.sh
-chmod +x akatosh_setup.sh 
-./akatosh_setup.sh 
-clang++ -target x86_64-pc-win32-coff -ffreestanding -fno-exceptions -fno-rtti   -mno-red-zone -nostdlib -Wall -Wextra   -Wno-unused-parameter -fshort-wchar   -o BOOTX64.EFI efi_main.cpp   -Wl,-subsystem,efi_application   -Wl,-entry:efi_main
-cd AkatoshAGI/AkatoshOS/boot/
-clang++ -target x86_64-pc-win32-coff -ffreestanding -fno-exceptions -fno-rtti   -mno-red-zone -nostdlib -Wall -Wextra   -Wno-unused-parameter -fshort-wchar   -o BOOTX64.EFI efi_main.cpp   -Wl,-subsystem,efi_application   -Wl,-entry:efi_main
-clang++ -target x86_64-pc-win32-coff -ffreestanding -fno-exceptions -fno-rtti   -mno-red-zone -nostdlib -Wall -Wextra   -Wno-unused-parameter -fshort-wchar   -o BOOTX64.EFI efi_main.cpp   -Wl,-subsystem,efi_application   -Wl,-entry:efi_main
-export AKATOSH_SRC="$HOME/AkatoshAGI"
-export AKATOSH_BUILD="$AKATOSH_SRC/build"
-rm -rf "$AKATOSH_BUILD"
-cmake -B "$AKATOSH_BUILD" -S "$AKATOSH_SRC"
-cd ../
-ls
-export AKATOSH_SRC="$HOME/AkatoshAGI/AkatoshOS"
-export AKATOSH_BUILD="$AKATOSH_SRC/build"
-rm -rf "$AKATOSH_BUILD"
-cmake -B "$AKATOSH_BUILD" -S "$AKATOSH_SRC"
-cmake -B "$AKATOSH_BUILD" =S "$AKATOSH_SRC"
-cmake -B "$AKATOSH_BUILD" -S "$AKATOSH_SRC"
-file "$AKATOSH_BUILD/esp/EFI/BOOT/BOOTX64.EFI"
-ls -al
-ls build/
-cd ../
-ls
-nvim .
-cd ../
-rm -rf AkatoshAGI/
-./akatosh_setup.sh 
-AkatoshAGI/AkatoshOS/boot_g1/scripts/run_qemu.sh 
-ls
-ls -al
-cd ../
-ls -al
-rm -rf .git
-ls
-cd AkatoshOS/
-ls
-nvim akatosh_setup.sh 
-cd "$ROOT/AkatoshOS/boot_g1"
-cd AkatoshAGI/AkatoshOS/boot_g1/
-make -j
-ls
-scripts/run_qemu.sh 
-nvim .
-cd AkatoshAGI/
-nvim .
-ls -al
-nvim .
-~/AkatoshAGI/AkatoshOS/boot_g1/scripts/run_qemu.sh 
-ls
-cp akatosh_setup.sh akatosh_setup.sh.bak
-nvim .
-pacman -S cursor
-sudo pacman -S cursor
-paru -S cursor
-paru -S cursor-bin
-ls
-rm akatosh_setup.sh
-mv akatosh_setup.sh.bak akatosh_setup.sh
-mkdir AkatoshAGI-v1-0-0-0-1-alpha
-mv akatosh_setup.sh AkatoshAGI-v1-0-0-0-1-alpha/
-mv AkatoshAGI AkatoshAGI-v1-0-0-0-1-alpha/
-sudo pacman -S dolphin
-sudo pacman -S pcmanfm
-tar -cJvf AkatoshAGI-G1-Working.tar.xz AkatoshAGI-v1-0-0-0-1-alpha/
-sudo pacman -S zip
-zip -r AkatoshAGI-G1-Working.zip AkatoshAGI-v1-0-0-0-1-alpha/
-ls
-ls Projects/
-cd Projects/
-ls
-ls AkatoshAGI/
-rmdir AkatoshAGI/
-ls
-cd
-mv AkatoshAGI* Projects/
-l;s
-ls
-rm -rf DevConfigs/
-ls
-clear
-mkdir AkatoshAGI
-nvim AkatoshAGI/
-pip install open-webui
-sudo pacman -S python-open-webui
-paru -S python-open-webui
-ls
-cd Projects/
-ls
-rm AkatoshAGI-G1-Working.*
-ls
-mkdir OpenWebUI
 cd OpenWebUI/
 python -m venv venv
 source venv/bin/activate
@@ -498,3 +390,111 @@ pnpm prisma:db:push
 pnpm db:seed
 pnpm add @tiptap/html @tiptap/starter-kit sanitize-html && pnpm add -D @types/sanitize-html
 shutdown -t 5
+nvim dotfiles/
+ls
+cd ./con
+cd .config
+ls
+mv nvim/ ../dotfiles/nvim/.config/
+rm -rf ~/dotfiles/nvim/.config/nvim/
+mv nvim/ ../dotfiles/nvim/.config/
+cd ~/dotfiles/nvim/.config/
+ls
+ls nvim/
+cd ../
+cd ../
+pwd
+stow -v -t "$HOME" shell starship nvim ghostty git
+cd ~
+cd .config/
+ls
+rm nvim ghostty -rf
+cd 
+rm .bash*
+ls -al
+cd dotfiles/
+stow -v -t "$HOME" shell starship nvim ghostty git
+ls
+nvim .
+chmod +x scripts/bootstrap.sh 
+git add -A
+git commit -m "init: stow-based dotfiles (shell, nvim, starship, ghostty, git)"
+# What will stow do?
+stow -n -v -t "$HOME" shell starship nvim ghostty git   # dry run
+# What did stow link?
+ls -l ~/.zshrc ~/.config/nvim ~/.config/starship.toml ~/.config/ghostty/config
+ls -al
+cd
+ls -al
+dotfiles/scripts/bootstrap.sh 
+chsh -s "/usr/bin/zsh"
+exit
+lsblk
+lsblk
+dmesg -w
+sudo dmesg -w
+lsusb
+lsusb
+lsusb
+lsblk
+uname -a
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+dmesg -w
+sudo dmesg -w
+clear
+lsblk
+sudo parted
+clear
+sudo parted /dev/sdc --script mklabel gpt mkpart SYRA_BOOT fat32 1MiB 2048MiB set 1 esp on \
+clear
+lsblk
+sudo parted /dev/sdc --script mklabel gpt mkpart SYRA_BOOT fat32 1MiB 2048MiB set 1 esp on mkpart SYRA_DOCS fat32 2048MiB 16384MiB mkpart SYRA_DATA ext4 16384MiB 100%
+sudo mkfs.vfat -F32 -n SYRA_BOOT /dev/sdc1
+sudo mkfs.exfat -n SYRA_DOCS /dev/sdc2
+sudo pacman -S exfatprogs
+sudo mkfs.exfat -n SYRA_DOCS /dev/sdc2
+sudo cryptsetup luksFormat /dev/sdc3
+sudo cryptsetup open /dev/sdc3 syra_data_crypt
+sudo mkfs.ext4 -L SYRA_DATA /dev/mapper/syra_data_crypt
+lsblk
+sudo mkfs.ext4 -L SYRA_DATA /dev/mapper/syra_data_crypt
+sudo smartctl -a /dev/sdc
+sudo pacman -S smartctl
+paru -S smartctl
+sudo pacman -S smartmontools
+sudo smartctl -a /dev/sdc
+sudo smartctl -a /dev/sdd
+clear
+lsblk
+sudo cryptsetup close syra_data_crypt
+sudo umount /mnt/syra_data 2>/dev/null
+sudo udisksctl power-off -b /dev/sdc
+sudo udisksctl power-off -b /dev/sdd
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+lsblk
+sudo cryptsetup open /dev/sdc3 syra_data_crypt
+sudo mkfs.ext4 -L SYRA_DATA /dev/mapper/syra_data_crypt 
+sudo badblocks -sv /dev/mapper/syra_data_crypt
+shutdown -t now
+shutdown -c
+shutdown --help
+shutdown -P now

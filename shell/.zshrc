@@ -10,6 +10,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=50000
 SAVEHIST=50000
 
+# SSH Agent
+eval "$(ssh-agent -s)"
+
 # Reuse portable bits
 [ -f ~/.bash_exports ] && source ~/.bash_exports
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
